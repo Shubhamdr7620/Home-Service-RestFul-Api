@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css"/>
+    <title>Home Page</title>
+</head>
+<body>
+        <h1> Home Services </h1>
+
+        <h4> Services</h4>
+        <h3> No. of services are <%= ServicesData.length %> </h3>
+        <div class="Services">
+
+            <% for(service of ServicesData) { %>
+          <div class="service">
+            <h5> Service Name : <%= service.name %></h5>
+            <p> Description :<%= service.description %></p> 
+            <h5> Location :<%= service.location %></h5>
+            </div>
+            <% } %>
+
+        </div>
+
+        <a href="/service"> Add New Service</a>
+</body>
+</html>

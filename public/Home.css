@@ -1,0 +1,20 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown;
+    font-size: xx-large;
+}
+
+h4{
+    font-family: 'Courier New', Courier, monospace;
+    color: blueviolet;
+}
+
+.service
+{
+    height: 200px;
+    width: 500px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    margin:10px;
+}
