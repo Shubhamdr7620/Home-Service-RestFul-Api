@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Service</title>
+</head>
+<body>
+    <form method="POST" action="/service/edit/<%= serv.id %>?_method=PATCH">
+        <h4> id : <%= serv.id%></h4>
+        <input type="text" placeholder="Enter Service Name" name="name" value="<%= serv.name%>"/>
+        <br><br>    
+        <textarea name="description"><%= serv.description %></textarea>
+        <br><br>
+        <input type="text" placeholder="Enter Location" name="location" value="<%= serv.location%>"/>
+        <br><br>
+        <input type="submit" value="update"/>
+    </form>
+</body>
+</html>

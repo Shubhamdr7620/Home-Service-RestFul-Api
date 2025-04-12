@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Home.css"/>
+    <link rel="stylesheet" href="/Home.css"/>
     <title>Home Page</title>
 </head>
 <body>
@@ -15,14 +15,19 @@
 
             <% for(service of ServicesData) { %>
           <div class="service">
+            <h5> id : <%= service.id %></h5>
             <h5> Service Name : <%= service.name %></h5>
             <p> Description :<%= service.description %></p> 
             <h5> Location :<%= service.location %></h5>
+            <button><a href="/service/<%= service.id %>/edit"> Edit Service </a></button>
+            <form method="POST" action="/service/<%= service.id %>/?_method=DELETE">
+            <button> Delete Service </button>
+        </form>
             </div>
             <% } %>
 
         </div>
 
-        <a href="/service"> Add New Service</a>
+        <a href="/service/new"> Add New Service</a>
 </body>
 </html>
